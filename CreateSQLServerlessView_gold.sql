@@ -11,9 +11,9 @@ DECLARE @statement VARCHAR(MAX)
 		SELECT *
 		FROM
 			OPENROWSET(
-			BULK ''https://***.dfs.core.windows.net/gold/SalesLT' + @ViewName + '/'',
+			BULK ''https://2asaddemodatalakegen2.dfs.core.windows.net/gold/SalesLT/' + @ViewName + '/'',
 			FORMAT = ''DELTA''
-		)as [result]
+		)as [result]'
 
 EXEC (@statement)
 
